@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Password Manager</title>
+	<link rel="stylesheet" href="static/style_login.css">
+
+	<link rel="icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	</head>
+<body>
+	<selection>
+		<header>
+			<a href="#"><img src="static/test.png" class="logo" onclick="location.replace('index.html');"></a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Our Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a onclick="window.location.reload();">Log In</a></li>
+			</ul>
+		</header>
+	</selection>
+
+    
+	<div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="/login.html" method="post">
+                    {% csrf_token %}
+                    
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" name = "lmail" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" name="lpass" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    {% comment %} <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        {% comment %} <a href="#" class="text">Forgot password?</a>
+                    </div> {%endcomment%}
+{% comment %} 
+                    <div class="input-field button">
+                        <input type="button" value="Login">
+                    </div> {% endcomment %}
+                    
+                    <button type="submit" class="input-field button" style="background-color:#ffc155;color:white;border:0px;border-radius:10px;font-size:18px">Login</button>
+                </form>
+                <div>
+                    {% if message %}
+                    <br>
+                    <p style="font-family:poppins;color:red;text-align:center;"><i class="fas fa-triangle-exclamation"></i>&nbsp {{message}}</p>
+                    {%endif%}
+                </div>
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="signup.html" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            
+        </div>
+    </div>
+    {% comment %} <script src="/static/login.js"></script> {% endcomment %}
+</body>
+</html>

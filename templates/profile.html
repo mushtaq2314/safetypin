@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SafetyPin</title>
+  <link rel="Shortcut Icon" type="x-icon" href="static/logo.png">
+  <link rel="stylesheet" href="static/style_profile.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><ab href="#" class="logo">
+					<img src="static/logo.png" alt="" height="70px">
+					<span class="nav-item">Safetypin</span>
+				</ab></li>
+				<li><a href="home.html">
+					<i class="fas fa-home"></i>
+					<span class="nav-item">Home</span>
+				</a></li>
+				<li><act href="profile.html">
+					<i class="fas fa-user"></i>
+					<span class="nav-item">Profile</span>
+				</act></li>
+				<li><a href="wallet.html">
+					<i class="fas fa-wallet"></i>
+					<span class="nav-item">Wallet</span>
+				</a></li>
+				<li><a href="passwords.html">
+					<i class="fas fa-key"></i>
+					<span class="nav-item">Passwords</span>
+				</a></li>
+				<li><a href="store.html">
+					<i class="fas fa-cog"></i>
+					<span class="nav-item">Store Passwords</span>
+				</a></li>
+				<li><a href="help.html">
+					<i class="fas fa-question-circle"></i>
+					<span class="nav-item">Help</span>
+				</a></li>
+				<li>
+          <a href="index.html" class="logout">
+					<i class="fas fa-sign-out-alt"></i>
+					<span class="nav-item">Logout</span>
+				</a>
+      </li>
+			</ul>
+		</nav>	
+	</div>
+  <div class="container1">
+    <div class="title">Profile</div>
+    <div class="content">
+      <form action="/profile.html" method="post">
+        {%csrf_token%}
+      	<div class="img-container">
+              <img src="static/dp.png"/>
+        </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" value="{{name}}" name = "name" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email Id</span>
+            <input type="text" value="{{mail}}" name = "mail" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" value="{{phone}}" name = "phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="text" value="{{dob}}" name = "dob" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender </span>
+            <input type="text" value="{{gender}}" name = "gender" placeholder="Enter your gender" required>
+          </div>
+          <div class="input-box">
+            <br>
+            <span1 class="details">Subscription : Pro</span1>
+          </div>
+        </div>
+        <div class="button" style="text-align:center;">
+          <button type="submit" style="background-color:#ffc155;color:white;border:0px;border-radius:10px;font-size:18px;padding:10px;cursor:pointer;">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

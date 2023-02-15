@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SafetyPin</title>
+  <link rel="Shortcut Icon" type="x-icon" href="static/logo.png">
+  <link rel="stylesheet" href="static/style_store.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><ab href="home.html" class="logo">
+					<img src="logo.png" alt="" height="70px">
+					<span class="nav-item">Safetypin</span>
+				</ab></li>
+				<li><a href="home.html">
+					<i class="fas fa-home"></i>
+					<span class="nav-item">Home</span>
+				</a></li>
+				<li><a href="profile.html">
+					<i class="fas fa-user"></i>
+					<span class="nav-item">Profile</span>
+				</a></li>
+				<li><a href="wallet.html">
+					<i class="fas fa-wallet"></i>
+					<span class="nav-item">Wallet</span>
+				</a></li>
+				<li><a href="passwords.html">
+					<i class="fas fa-key"></i>
+					<span class="nav-item">Passwords</span>
+				</a></li>
+				<li><act href="settings.html">
+					<i class="fas fa-cog"></i>
+					<span class="nav-item">Store</span>
+				</act></li>
+				<li><a href="help.html">
+					<i class="fas fa-question-circle"></i>
+					<span class="nav-item">Help</span>
+				</a></li>
+				<li><a href="index.html" class="logout">
+					<i class="fas fa-sign-out-alt"></i>
+					<span class="nav-item">Logout</span>
+				</a></li>
+			</ul>
+		</nav>	
+	</div>
+	<div class="container1">
+        <header>Store Passwords</header>
+
+        <form action="store.html" method="post">
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Existing Passwords Will Be Overwritten</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Facebook</label>
+                            <input type="text" name="1" value="{{passwords.Facebook}}"placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Instagram</label>
+                            <input type="text" name="2" value="{{passwords.Instagram}}" placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Twitter</label>
+                            <input type="text" name="3" value="{{passwords.Twitter}}" placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Dropbox</label>
+                            <input type="text" name="4" value="{{passwords.Dropbox}}" placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Google</label>
+                            <input type="text" name="5" value="{{passwords.Google}}" placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spotify</label>
+                            <input type="text" name="6" value="{{passwords.Spotify}}" placeholder="Enter Password">
+                        </div>
+                        <div class="input-field">
+                            <label>GitHub</label>
+                            <input type="text" name="7" value="{{passwords.GitHub}}" placeholder="Enter Password">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Snapchat</label>
+                            <input type="text" name="8" value="{{passwords.Snapchat}}" placeholder="Enter Password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <button class="nextBtn">
+                        <span class="btnText">Save Changes</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
