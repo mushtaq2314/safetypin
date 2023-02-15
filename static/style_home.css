@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body{
+	background: #f7eddc;
+}
+.container{
+	display: flex;
+}
+nav{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	height: 100vh;
+	left: 0;
+	background: #ffffff;
+	width: 235px;
+	overflow: hidden;
+	box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+.logo{
+	text-align: center;
+	display: flex;
+	margin: 10px 0 0 10px;
+}
+.logo span{
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-top: 13px;
+}
+a{
+	position: relative;
+	color: #545454;
+	font-size: 14px;
+	display: table;
+	width: 288px;
+	padding: 10px;
+	animation: animate 0.35s;
+}
+@keyframes animate{
+	from{
+		transform: rotateX(90deg);
+	}
+	to{
+		transform: rotateX(0deg);
+	}
+}
+ab{
+	position: relative;
+	color: #333;
+	font-size: 14px;
+	display: table;
+	width: 288px;
+	padding: 10px;
+	cursor: context-menu;;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+nav .fas{
+	position: relative;
+	width: 70px;
+	height: 40px;
+	top: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+.nav-item{
+	position: relative;
+	top: 8px;
+	margin-left: 10px;
+}
+a:hover{
+	background: #ffca71;
+	color: #222;
+	transition: 0.35s ease;
+}
+.logout{
+	position: absolute;
+	bottom: 0;
+}
+h2{
+	position: absolute;
+	top: 50px;
+	left: 750px;
+}
+h3{
+	position: absolute;
+	top: 100px;
+	left: 800px;
+}
